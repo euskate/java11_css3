@@ -210,12 +210,50 @@
     <ul>
         <li><p>선택자의 우선 순위는 아이디 > 클래스 > 태그 순이다.</p></li>
         <li><p>단계적으로 선택자를 기입하되, 단순한 선택자 부터 기입하고, 복잡한 선택자를 아래에 배치한다.</p></li>
-        <li><p>범위가 크거나 부모의 선택부터 하고, 범위가 작거나 세밀한 선택을 하도록 해야 한다.</p></li>
+        <li><p>범위가 크거나 부모의 선택부터 하고, 그 다음에 범위가 작거나 세밀한 선택을 하도록 해야 한다.</p></li>
         <li><p>아이디는 한 문서 내에서 중복되어서는 안된다.</p></li>
         <li><p>같은 서식이 부여되는 경우는 가급적 클래스를 활용하여 같은 서식을 부여하도록 한다.</p></li>
     </ul>
     
-    <br><br><br>
+    <br><br><hr><br>
+
+    <h2>CSS 속성 - Color</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>속성명</th><th>도메인</th><th>설명</th><th>예시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>background-color</td><td>transparent | 컬러명 | RGB HEX(3/6) | RGB(0-255,0-255,0-255) | HSL(Hue,Sturation%,Lightness%)</td><td>배경색을 지정하는 속성</td></td><td>background-color:#000<br>background-color:#000000<br>background-color:black<br>background-color:rgb(0,0,0)<br>background-color:rgba(0,0,0,1)<br>background-color:hsl(240,0%,0%)<br>background-color:hsla(240,0%,0%,1)</td>                
+            </tr>
+            <tr>
+                <td>background-image</td><td>none | url(이미지경로)</td><td>배경 이미지를 지정하는 속성</td><td>background-image:url(./images/ive.png), url(./images/jungle.jpg)</td>                
+            </tr>
+            <tr>
+                <td>background-repeat</td><td>repeat | repeat-x | repeat-y | no-repeat</td><td>배경이미지의 반복 속성</td><td>background-image:url(./images/ive.png), url(./images/jungle.jpg)</td>                
+            </tr>
+            <tr>
+                <td>background-position</td><td>가로위치 세로위치로 지정하되, 0 0 | top | bottom | left | right | middle | 숫자(+/-)px/%</td><td>배경이미지 위치 지정 속성</td><td>background-position:left bottom<br>background-position:-200px -100px</td>                
+            </tr>
+            <tr>
+                <td>background-attachment</td><td>scroll | fixed | local</td><td>배경이미지 고정 유무 지정 속성</td><td>background-attachment:fixed</td>                
+            </tr>
+            <tr>
+                <td>background-origin</td><td>padding-box | border-box | content-box</td><td>배경이미지의 원점 기준 지정 속성</td><td>background-origin:content-box</td>                
+            </tr>
+            <tr>
+                <td>background-size</td><td>auto | 가로크기 세로크기 | cover | contain</td><td>배경이미지의 크기 지정 속성</td><td>background-size:100px 200px, 200px 400px</td>                
+            </tr>
+            <tr>
+                <td>background-clip</td><td>padding-box | border-box | content-box</td><td>배경이미지의 영역을 어디까지 표시할지 지정 속성</td><td>background-clip:border-box</td>                
+            </tr>
+            <tr>
+                <td>background</td><td>bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment</td><td>배경에 모든 세부속성을 한 꺼번에 지저하는 통합 속성</td><td>background-clip:border-box</td>                
+            </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>
