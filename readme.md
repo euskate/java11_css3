@@ -7,7 +7,7 @@
 
 <br><br>
 
-## 1. CSS 적용 방법
+## 1. CSS 적용 방법과 기본 문법
 
 ### 1-1. 외부 스타일(External Style)
 
@@ -42,7 +42,7 @@
 
 <br><br>
 
-## 2. CSS 기본 문법
+### 1-4. CSS 기본 문법
 
 ![CSS기본문법](style_rule.png)
 
@@ -50,9 +50,9 @@
 
 ------------------------------------------------------------------------
 
-<br><br>
+<br><hr><br>
 
-## 3. CSS 선택자
+## 2. CSS 선택자
 
 
 | 선택자 이름 | 선택자 문법 | 설명 | 예시 |
@@ -111,6 +111,52 @@
 <br><br>
 
 
-## 4. CSS 속성
+## 3. CSS 속성 - Background
 
+| 속성명 | 도메인 | 설명 | 예시
+|------------|--------------------------------------------------|------------------------------------|-----------------------------|
+| background-color	 | transparent &#124; 컬러명 &#124; RGB HEX(3/6) &#124; RGB(0-255,0-255,0-255) &#124; HSL(Hue,Sturation%,Lightness%) | 배경색을 지정하는 속성 | background-color:#000<br>background-color:#000000<br>background-color:black<br>background-color:rgb(0,0,0)<br>background-color:rgba(0,0,0,1)<br>background-color:hsl(240,0%,0%)<br>background-color:hsla(240,0%,0%,1) |
+| background-image | none &#124; url(이미지경로) | 배경 이미지를 지정하는 속성 | background-image:url(./images/ive.png), url(./images/jungle.jpg) |
+| background-repeat | repeat &#124; repeat-x &#124; repeat-y &#124; no-repeat | 배경이미지의 반복 속성 | background-image:url(./images/ive.png), url(./images/jungle.jpg) |
+| background-position | 가로위치 세로위치로 지정하되, 0 0 &#124; top &#124; bottom &#124; left &#124; right &#124; middle &#124; 숫자(+/-)px/% | 배경이미지 위치 지정 속성 | background-position:left bottom<br> background-position:-200px -100px |
+| background-attachment | scroll &#124; fixed &#124; local | 배경이미지 고정 유무 지정 속성 | background-attachment:fixed |
+| background-origin | padding-box &#124; border-box &#124; content-box	배경이미지의 원점 기준 지정 속성 | background-origin:content-box |
+| background-size | auto &#124; 가로크기 세로크기 &#124; cover &#124; contain | 배경이미지의 크기 지정 속성 | background-size:100px 200px, 200px 400px |
+| background-clip | padding-box &#124; border-box &#124; content-box | 배경이미지의 영역을 어디까지 표시할지 지정 속성 | background-clip:border-box |
+| background | bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment | 배경에 모든 세부속성을 한 꺼번에 지정하는 통합 속성 | background-clip:border-box |
+| filter | blur(px) &#38;&#124; brightness(%) &#38;&#124; contrast(%) &#38;&#124; grayscale(%) &#38;&#124; invert(%) &#38;&#124; opcacity(%) &#38;&#124; saturate(%) &#38;&#124; sepia(%) &#38;&#124; drop-shadow(x y blur px) &#38;&#124; hue-rotate(deg) | 배경이나 이미지에 필터 효과를 적용하는 속성 | filter:blur(3px) hue-rotate(45deg) opacity(85%) |
+
+<br><hr><br>
+
+## 4. CSS 속성 - 글자/문단 속성
+
+| 속성명 | 도메인 | 설명 | 예시 |
+|------------|--------------------------------------------------|------------------------------------|-----------------------------|
+| @font-face | @font-face { font-family:"폰트별칭"; src:url(폰트파일이름을포함한웹폰트의경로); }	| 웹페이지에서 적용할 폰트를 규정하는 규칙 | @font-face { font-family:"ntg"; url(./font/notosans.woff); } |
+| font-famliy | font-family:"폰트별칭"[, 대체폰트1, 기본웹폰트]; | 폰트 규칙(@font-face) 에서 규정한 폰트를 적용하는 속성. <br> 기본웹폰트에는 serif(명조), sans-serif(고딕), cursive(궁서), fantasy(장식), monospace(장평같음) | .con { font-family:"ntg", sans-serif; } |
+| color | color:색상명 &#124; HEX(3/6) &#124; rgb() &#124; rgba() &#124; hsl() &#124; hsla() | 글자색을 지정하는 속성으로 16진수 HEX code와 여러 색 함수를 활용할 수 있음. | .con { color:deepskyblue; } <br>.con strong { color:#333; } |
+| font-size | font-size: initial &#124; xx-small &#124; x-small &#124; small &#124; medium &#124; large &#124; x-large &#124; xx-large &#124; px, cm, em, %, rem 단위 | 글자크기를 지정하는 속성으로 크기를 나타내는 키워드 또는 크기단위로 지정할 수 있음. | .con { font-size:14px; } <br>.con strong { font-size:1.5em; } |
+| font-weight | font-weight: normal &#124; bold &#124; bolder &#124; lighter &#124; 100 &#124; 200 &#124; 300 &#124; 400 &#124; 500 &#124; 600 &#124; 700 &#124; 800 &#124; 900 | 글자 두께를 지정하는 속성으로 크기를 100부터 900까지 100단위로 지정할 수 있으며,<br> 해당 키워드도 가능함. | .con { font-size:14px; }<br> .con strong { font-size:1.5em; } |
+| font-style | font-style: normal &#124; italic &#124; oblique | 기울임꼴을 지정하는 속성 | .con { font-style:italic; } <br> .con strong { font-style:normal; } |
+| font-variant | font-variant: normal &#124; small-caps | 대소문자가 있는 알파벳 계열에서 대소문자의 크기가 서로 달라서 대문자를 소문자 크기로 변경하기 위한 속성 | .con { font-variant:small-caps; }<br> .con strong { font-variant:normal; } |
+| font-stretch | font-stretch: normal &#124; ultra-condensed &#124; extra-condensed &#124; condensed &#124; semi-condensed &#124; semi-expanded &#124; expanded &#124; extra-expanded &#124; ultra-expanded	| 글자의 장평(높이와 폭의 비율) 지정하기 위한 속성 | .con { font-stretch:condensed; }<br>.con strong { font-stretch:expanded; } |
+| line-height | line-height: normal &#124; 숫자 &#124; px, % 단위 | 한 행의 높이를 지정하기 위한 속성으로 블록요소에 지정 | .con { line-height:2; } <br> .con strong { line-height:30px; } |
+| word-spacing | word-spacing: normal &#124; px,pt,cm,em 단위 | 어간(단어와 단어 사이의 간격)을 지정하기 위한 속성 | .con { word-spacing:10px; }<br> .con strong { word-spacing:normal; } |
+| letter-spacing | letter-spacing: normal &#124; px,pt,cm,em 단위 | 자간(글자와 글자 사이의 간격)을 지정하기 위한 속성 | .con { letter-spacing:10px; } <br> .con strong { letter-spacing:-2px; } |
+| text-align | text-align: left &#124; right &#124; center &#124; justify | 글자 정렬을 의미하며, 블록요소에 지정하는 속성 | .con { text-align:center; } <br> .con strong { text-align:left; } |
+| text-decoration | text-decoration: none &#124; underline &#124; overline &#124; line-through | 글자나 특정 단어에 줄을 적용할 때 지정하는 속성 | .con { text-decoration:none; }<br> .con strong { text-decoration:underline; } |
+| text-indent | text-indent: %, px, pt, cm, em 단위 | 들여쓰기(+)/내어쓰기(-)를 지정하는 속성 | .con1 { text-indent:20px; }<br> .con2 { text-indent:-20px; } |
+| text-transform | text-transform: none &#124; uppercase &#124; lowercase &#124; capitalize | 영문계열의 문자를 대/소문자로 변환해주는 속성 | .con1 { text-transform:uppercase; }<br> .con2 { text-transform:capitalize; } |
+| text-orientation | text-orientation: mixed &#124; upright &#124; sideways &#124; sideways-right &#124; use-glyph-orientation | 문단의 글자 읽는 진행방향을 설정해주는 속성 | .con1 { text-orientation:upright; }<br> .con2 { text-orientation:sideways; } |
+| direction | direction: ltr &#124; rtl | 글자의 진행 방향을 지정하는 속성 | .con1 { direction: rtl; } |
+| writing-mode | writing-mode: horizontal-tb &#124; sideways-lr &#124; sideways-rl &#124; vertical-rl &#124; vertical-lr | 글자의 표시 방향을 지정하는 속성 | .con1 { writing-mode: sideways-rl; } |
+| word-break | word-break: normal &#124; break-all &#124; keep-all &#124; break-word | 줄 끝에 도달했을 때 단어가 어떻게 끊어져야 하는지를 지정하는 속성 | .con1 { word-break:break-all; }<br> .con2 { word-break:keep-all; } |
+| word-wrap | word-wrap: normal &#124; break-word | 긴 단어를 나누어 다음 줄로 넘길 수 있도록 지정하는 속성 | .con1 { word-break:break-word; } <br> .con2 { word-break:normal; } |
+| white-space | white-space: normal &#124; nowrap &#124; pre &#124; pre-line &#124; pre-wrap | 요소 내부의 공백을 처리하는 방법을 지정하는 속성 | .con1 { white-space:nowrap; }<br> .con2 { white-space:pre; } |
+| text-overflow | text-overflow: clip &#124; ellipsis &#124; string | 영역의 크기에 비해 흘러 넘치는 텍스트를 어떻게 처리할지 지정하는 속성 | .con1 { text-overflow:clip; }<br> .con2 { text-overflow:ellipsis; } |
+| text-shadow | text-shadow: none &#124; h-shadow v-shadow blur-radius color | 텍스트에 그림자를 지정하는 속성 | .con1 { text-shadow:2px 2px 8px #ff0000; }<br> .con2 { text-shadow:-3px -3px 4px #00ff00; } |
+
+※ font-variant, text-transform 속성의 경우 알파벳과 같이 대소문자가 있는 경우만 지원하는 속성이며, 적용되는 폰트에 따라 지원하지 않거나 적용되지 않는 속성이 있음을 주의하시기 바랍니다.
+
+<br><hr><br>
 

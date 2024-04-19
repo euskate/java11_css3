@@ -38,7 +38,7 @@
     <p>CSS(Cascading Style Sheet) 라고도 하며, 줄여서 스타일(Style)이라고도 한다.</p>
     <p>Cascading(계단식) Style(모양) Sheet(기록패널)</p>
     <hr>
-    <h2>CSS 적용 방법</h2>
+    <h2>1. CSS 적용 방법</h2>
     <ul>
         <li>
             <h3>외부 스타일(External Style)</h3>
@@ -75,7 +75,7 @@
         </li>
     </ul>
     <hr>
-    <h2>스타일 기본 문법</h2>
+    <h2>2. 스타일 기본 문법</h2>
     <p>
         <img src="style_rule.png" alt="스타일 기본 문법">
     </p>
@@ -217,8 +217,8 @@
     
     <br><br><hr><br>
 
-    <h2>CSS 속성 - Background</h2>
-    <table class="table">
+    <h2>3. CSS 속성 - Background</h2>
+    <table class="table" border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>
                 <th>속성명</th><th>도메인</th><th>설명</th><th>예시</th>
@@ -260,8 +260,8 @@
 
     <br><br><hr><br>
 
-    <h2>CSS 속성 - 글자/문단 속성</h2>
-    <table class="table">
+    <h2>4. CSS 속성 - 글자/문단 속성</h2>
+    <table class="table" border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>
                 <th>속성명</th><th>도메인</th><th>설명</th><th>예시</th>
@@ -305,9 +305,6 @@
                 <td>text-align</td><td>text-align: left | right | center | justify</td><td>글자 정렬을 의미하며, 블록요소에 지정하는 속성</td><td>.con { text-align:center;  }<br>.con strong { text-align:left; }</td>                
             </tr>
             <tr>
-                <td>text-align</td><td>text-align: left | right | center | justify</td><td>글자 정렬을 의미하며, 블록요소에 지정하는 속성</td><td>.con { text-align:center;  }<br>.con strong { text-align:left; }</td>                
-            </tr>
-            <tr>
                 <td>text-decoration</td><td>text-decoration: none | underline | overline | line-through</td><td>글자나 특정 단어에 줄을 적용할 때 지정하는 속성</td><td>.con { text-decoration:none;  }<br>.con strong { text-decoration:underline; }</td>                
             </tr>
             <tr>
@@ -318,6 +315,12 @@
             </tr>
             <tr>
                 <td>text-orientation</td><td>text-orientation: mixed | upright | sideways | sideways-right | use-glyph-orientation</td><td>문단의 글자 읽는 진행방향을 설정해주는 속성</td><td>.con1 { text-orientation:upright;  }<br>.con2 { text-orientation:sideways; }</td>                
+            </tr>
+            <tr>
+                <td>direction</td><td>direction: ltr | rtl</td><td>글자의 진행 방향을 지정하는 속성</td><td>.con1 { direction: rtl; }</td>                
+            </tr>
+            <tr>
+                <td>writing-mode</td><td>writing-mode: horizontal-tb | sideways-lr | sideways-rl | vertical-rl | vertical-lr</td><td>글자의 표시 방향을 지정하는 속성</td><td>.con1 { writing-mode: sideways-rl; }</td>                
             </tr>
             <tr>
                 <td>word-break</td><td>word-break: normal | break-all | keep-all | break-word</td><td>줄 끝에 도달했을 때 단어가 어떻게 끊어져야 하는지를 지정하는 속성</td><td>.con1 { word-break:break-all;  }<br>.con2 { word-break:keep-all; }</td>                
@@ -339,8 +342,8 @@
     
     <br><br><hr><br>
 
-    <h2>CSS 속성 - 크기에 영향을 주는 속성(Boxing Properties)</h2>
-    <table class="table">
+    <h2>5. CSS 속성 - 출력 및 크기에 영향을 주는 속성(Boxing Properties)</h2>
+    <table class="table" border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>
                 <th>속성명</th><th>도메인</th><th>설명</th><th>예시</th>
@@ -348,73 +351,170 @@
         </thead>
         <tbody>
             <tr>
-                <td>width</td><td>auto | %, px, cm, vw 단위</td><td>콘텐츠 요소의 너비를 지정하는 속성</td><td>width:100%;</td>                
+                <td>display</td><td>display : block | inline | inline-block | none</td><td>콘텐츠의 출력 방식을 지정하는 속성</td><td>display:block;</td>                
             </tr>
             <tr>
-                <td>height</td><td>auto | %, px, cm, vh 단위</td><td>콘텐츠 요소의 높이를 지정하는 속성</td><td>height:100vh;</td>                
+                <td>opacity</td><td>opacity : 0~1 숫자</td><td>콘텐츠 요소의 불투명도를 지정하는 속성</td><td>opcity:0.5;</td>                
             </tr>
             <tr>
-                <td>margin</td><td> auto | %, px, cm 단위 </td><td>박스의 바깥 여백를 지정하는 속성</td><td>margin:25px;<br>margin:20px auto;<br>margin:10px 20px 30px 40px;</td>                
+                <td>visibility</td><td>visibility : visible | hidden | collapse</td><td>콘텐츠의 보일지 숨길지를 지정하는 속성</td><td>visibility:hidden<br>display:none은 출력을 하지 않으므로 크기가 설정되지 않지만,<br>visibility:hidden은 보이지 않을 뿐 크기가 지정되어 그 자리를 차지하고 있음.</td>                
             </tr>
             <tr>
-                <td>margin-top</td><td> auto | %, px, cm 단위 </td><td>박스 바깥의 위 여백를 지정하는 통합 속성</td><td>margin-top:25px;</td>                
+                <td>width</td><td>width : auto | %, px, cm, vw 단위</td><td>콘텐츠 요소의 너비를 지정하는 속성</td><td>width:100%;</td>                
             </tr>
             <tr>
-                <td>margin-right</td><td> auto | %, px, cm 단위 </td><td>박스 바깥의 오른쪽 여백를 지정하는 세부 속성</td><td>margin-right:40%;</td>                
+                <td>height</td><td>height : auto | %, px, cm, vh 단위</td><td>콘텐츠 요소의 높이를 지정하는 속성</td><td>height:100vh;</td>                
             </tr>
             <tr>
-                <td>margin-bottom</td><td> auto | %, px, cm 단위 </td><td>박스 바깥의 아래 여백를 지정하는 세부 속성</td><td>margin-bottom:10px;</td>                
+                <td>margin</td><td>margin: auto | %, px, cm 단위 </td><td>박스의 바깥 여백를 지정하는 속성</td><td>margin:25px;<br>margin:20px auto;<br>margin:10px 20px 30px 40px;</td>                
             </tr>
             <tr>
-                <td>margin-left</td><td> auto | %, px, cm 단위 </td><td>박스 바깥의 왼쪽 여백를 지정하는 세부 속성</td><td>margin-left:40px;</td>                
+                <td>margin-top</td><td>margin-top: auto | %, px, cm 단위 </td><td>박스 바깥의 위 여백를 지정하는 통합 속성</td><td>margin-top:25px;</td>                
             </tr>
             <tr>
-                <td>padding</td><td> auto | %, px, cm, em(rem) 단위 </td><td>박스의 안 여백를 지정하는 통합 속성</td><td>padding:25px;<br>padding:20px auto;<br>padding:10px 20px 30px 40px;</td>                
+                <td>margin-right</td><td>margin-right: auto | %, px, cm 단위 </td><td>박스 바깥의 오른쪽 여백를 지정하는 세부 속성</td><td>margin-right:40%;</td>                
             </tr>
             <tr>
-                <td>padding-top</td><td> auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 위 여백를 지정하는 세부 속성</td><td>padding-top:1rem;</td>                
+                <td>margin-bottom</td><td>margin-bottom: auto | %, px, cm 단위 </td><td>박스 바깥의 아래 여백를 지정하는 세부 속성</td><td>margin-bottom:10px;</td>                
             </tr>
             <tr>
-                <td>padding-right</td><td> auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 오른쪽 여백를 지정하는 세부 속성</td><td>padding-right:10px;</td>                
+                <td>margin-left</td><td>margin-left: auto | %, px, cm 단위 </td><td>박스 바깥의 왼쪽 여백를 지정하는 세부 속성</td><td>margin-left:40px;</td>                
             </tr>
             <tr>
-                <td>padding-bottom</td><td> auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 아래 여백를 지정하는 세부 속성</td><td>padding-bottom:5%;</td>                
+                <td>padding</td><td>padding: auto | %, px, cm, em(rem) 단위 </td><td>박스의 안 여백를 지정하는 통합 속성</td><td>padding:25px;<br>padding:20px auto;<br>padding:10px 20px 30px 40px;</td>                
             </tr>
             <tr>
-                <td>padding-left</td><td> auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 왼쪽 여백를 지정하는 속성</td><td>padding-left:14px; </td>                
+                <td>padding-top</td><td>padding-top: auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 위 여백를 지정하는 세부 속성</td><td>padding-top:1rem;</td>                
             </tr>
             <tr>
-                <td>border</td><td> px/pt크기 선모양 선색상</td><td>박스의 테두리를 지정하는 통합 속성</td><td>border:2px solid #333;<br>border:2px solid #333, 4px dashed #f00;</td>                
+                <td>padding-right</td><td>padding-right: auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 오른쪽 여백를 지정하는 세부 속성</td><td>padding-right:10px;</td>                
             </tr>
             <tr>
-                <td>border-width</td><td> px/pt크기</td><td>박스의 테두리 두께를 지정하는 세부 속성</td><td>border-width:2px;<br>border-width:2px 4px;</td>                
+                <td>padding-bottom</td><td>padding-bottom: auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 아래 여백를 지정하는 세부 속성</td><td>padding-bottom:5%;</td>                
             </tr>
             <tr>
-                <td>border-style</td><td>none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</td><td>박스의 테두리 선 모양을 지정하는 세부 속성</td><td>border-style:solid;<br>border-style:solid dotted dashed hidden;</td>                
+                <td>padding-left</td><td>padding-left: auto | %, px, cm, em(rem) 단위 </td><td>박스 안의 왼쪽 여백를 지정하는 속성</td><td>padding-left:14px; </td>                
             </tr>
             <tr>
-                <td>border-color</td><td>컬러명 | RGB HEX(3/6) | RGB() | RGBA() | HSL() | HSLA()</td><td>박스의 테두리 선 색상을 지정하는 세부 속성</td><td>border-color:red;<br>border-color:navy blue gold orange;</td>                
+                <td>border</td><td>border: px/pt크기 선모양 선색상</td><td>박스의 테두리를 지정하는 통합 속성</td><td>border:2px solid #333;<br>border:2px solid #333, 4px dashed #f00;</td>                
             </tr>
             <tr>
-                <td>border-top</td><td> px/pt크기 선모양 선색상</td><td>박스의 위 테두리를 지정하는 세부 속성</td><td>border-top:2px solid #333;</td>                
+                <td>border-width</td><td>border-width: px/pt크기</td><td>박스의 테두리 두께를 지정하는 세부 속성</td><td>border-width:2px;<br>border-width:2px 4px;</td>                
             </tr>
             <tr>
-                <td>border-right</td><td> px/pt크기 선모양 선색상</td><td>박스의 오른쪽 테두리를 지정하는 세부 속성</td><td>border-right:2px solid #333;</td>                
+                <td>border-style</td><td>border-style: none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</td><td>박스의 테두리 선 모양을 지정하는 세부 속성</td><td>border-style:solid;<br>border-style:solid dotted dashed hidden;</td>                
             </tr>
             <tr>
-                <td>border-bottom</td><td> px/pt크기 선모양 선색상</td><td>박스의 아래 테두리를 지정하는 세부 속성</td><td>border-bottom:2px solid #333;</td>                
+                <td>border-color</td><td>border-color: 컬러명 | RGB HEX(3/6) | RGB() | RGBA() | HSL() | HSLA()</td><td>박스의 테두리 선 색상을 지정하는 세부 속성</td><td>border-color:red;<br>border-color:navy blue gold orange;</td>                
             </tr>
             <tr>
-                <td>border-left</td><td> px/pt크기 선모양 선색상</td><td>박스의 왼쪽 테두리를 지정하는 세부 속성</td><td>border-left:2px solid #333;</td>                
+                <td>border-top</td><td>border-top: px/pt크기 선모양 선색상</td><td>박스의 위 테두리를 지정하는 세부 속성</td><td>border-top:2px solid #333;</td>                
+            </tr>
+            <tr>
+                <td>border-right</td><td>border-right: px/pt크기 선모양 선색상</td><td>박스의 오른쪽 테두리를 지정하는 세부 속성</td><td>border-right:2px solid #333;</td>                
+            </tr>
+            <tr>
+                <td>border-bottom</td><td>border-bottom: px/pt크기 선모양 선색상</td><td>박스의 아래 테두리를 지정하는 세부 속성</td><td>border-bottom:2px solid #333;</td>                
+            </tr>
+            <tr>
+                <td>border-left</td><td>border-left: px/pt크기 선모양 선색상</td><td>박스의 왼쪽 테두리를 지정하는 세부 속성</td><td>border-left:2px solid #333;</td>                
             </tr>
             <tr>
                 <td>border 세세속성</td><td> border-방향-width/style/color</td><td>박스의 테두리를 방향과 그 방향의 테두리 두께, 모양, 색상을 하나 하나 세부적으로 지정하는 세세속성</td><td>border-left-style:solid;</td>                
             </tr>
             <tr>
-                <td>box-sizing</td><td>content-box | border-box</td><td>박스에 지정된 크기를 어디까지의 값으로 계산할지 설정하는 속성</td><td>border-box:border-box;</td>                
+                <td>border-raduis</td><td>border-radius: px, %, em 단위 숫자</td><td>박스의 모서리 둥글기를 지정하는 속성</td><td>border-radius:10px;<br>border-radius:10px 30px;<br>border-radius:10px 20px 30px 40px;</td>                
+            </tr>
+            <tr>
+                <td>box-sizing</td><td>box-sizing: content-box | border-box</td><td>박스에 지정된 크기를 어디까지의 값으로 계산할지 설정하는 속성</td><td>border-box:border-box;</td>                
+            </tr>
+            <tr>
+                <td>overflow</td><td>overflow: visible | hidden | auto | scroll</td><td>지정된 박스크기를 벗어난 흘러 넘친 콘텐츠를 어떻게 처리할지 설정하는 속성</td><td>overflow:auto;</td>                
+            </tr>
+            <tr>
+                <td>overflow-x</td><td>overflow-x: visible | hidden | auto | scroll</td><td>지정된 박스 가로크기를 벗어난 흘러 넘친 콘텐츠를 어떻게 처리할지 설정하는 속성</td><td>overflow-x:hidden;</td>                
+            </tr>
+            <tr>
+                <td>overflow-x</td><td>overflow-y: visible | hidden | auto | scroll</td><td>지정된 박스 세로크기를 벗어난 흘러 넘친 콘텐츠를 어떻게 처리할지 설정하는 속성</td><td>overflow-y:scroll;</td>                
             </tr>
         </tbody>
     </table>        
+
+    <br><br><hr><br>
+
+    <h2>6. CSS 속성 - 배치와 관련된 속성(Locational Properties)</h2>
+    <table class="table" border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>속성명</th><th>도메인</th><th>설명</th><th>예시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>position</td><td>position : static | absolute | relative | fixed | sticky</td><td>콘텐츠 배치 방법을 지정하는 속성</td><td>position:relative;</td>                
+            </tr>
+            <tr>
+                <td>float</td><td>float : none | left | right </td><td>한 행에 여러 콘텐츠를 배치할 경우 그 흐름의 방향을 지정하는 속성</td><td>float:left;</td>                
+            </tr>
+            <tr>
+                <td>clear</td><td>clear : none | left | right | both</td><td> 흐름의 방향을 지정하는 float 속성을 해체할 경우 설정하는 속성</td><td>clear:both;</td>                
+            </tr>
+            <tr>
+                <td>top</td><td>top : auto | px, %, em, vh 단위 숫자</td><td> 맨 위로 부터 떨어진 위치를 지정하는 속성</td><td>top:50px;</td>                
+            </tr>
+            <tr>
+                <td>bottom</td><td>bottom : auto | px, %, em, vh 단위 숫자</td><td>맨 아래 바닥으로 부터 떨어진 위치를 지정하는 속성</td><td>bottom:15px;</td>                
+            </tr>
+            <tr>
+                <td>left</td><td>left : auto | px, %, em, vw 단위 숫자</td><td>맨 왼쪽 시작부터 떨어진 위치를 지정하는 속성</td><td>left:3%;</td>                
+            </tr>
+            <tr>
+                <td>right</td><td>right : auto | px, %, em, vw 단위 숫자</td><td>맨 오른쪽 끝 부터 떨어진 위치를 지정하는 속성</td><td>right:2%;</td>                
+            </tr>
+            <tr>
+                <td>z-index</td><td>z-index : auto | 숫자</td><td>콘텐츠들이 겹칠 경우 레이어(우선순위)번호를 지정하는 속성</td><td>z-index:99;</td>                
+            </tr>
+        </tbody>
+    </table>
+    
+    <p>※ position이 static이거나 relative인 경우는 margin, float, clear 속성을 활용하여 배치한다.</p>
+    <p>※ position이 absolute이거나 fixed인 경우는 left/right 중에서 하나의 속성만 이용하여 가로의 위치를 설정하고, top/bottom 중에서 하나의 속성을 이용하여 세로의 위치를 설정한다.</p>
+    <p>※ position이 absolute이거나 fixed인 경우는 여러 콘텐츠를 겹칠 수 있어 겹칠 경우 z-index의 값을 조절하여 지정하되, 앞으로 올라올 콘텐츠에는 z-index의 값을 큰수로 한다.</p>
+    <p>※ position이 absolute이면, body 요소를 기준으로 기준점이 잡히기 때문에 위치기준이 문서의 처음의 맨 위 상단으로 하므로,
+        부모 요소에 relative를 적용하면, 부모를 기준으로 기준점을 지정할 수 있다.
+    </p>
+
+    <br><br><hr><br>
+
+    <h2>7. CSS 속성 - 기타 속성</h2>
+    <table class="table" border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>속성명</th><th>도메인</th><th>설명</th><th>예시</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>list-style</td><td>list-style : none | list-style-type list-style-position list-style-image</td><td>목록의 기호를 설정하는 속성</td><td>list-style:none</td>                
+            </tr>
+            <tr>
+                <td>list-style-type</td><td>list-style-type : none | disc | armenian | circle | decimal | georgian | hebrew | hiragana | katakana | lower-alpha | lower-greek | lower-latin | lower-roman | square | upper-alpha | upper-greek | upper-latin | upper-roman</td><td>목록 기호의 종류를 지정하는 속성</td><td>list-style-type: disc;</td>                
+            </tr>
+            <tr>
+                <td>list-style-position</td><td>list-style-position: inside | outside</td><td>목록 기호의 위치를 설정하는 속성</td><td>list-style-position: inside</td>                
+            </tr>
+            <tr>
+                <td>list-style-image</td><td>list-style-image: none | url</td><td> 목록 기호의 이미지를 지정하는 속성</td><td>top:50px;</td>                
+            </tr>
+            <tr>
+                <td>cursor</td><td>cursor : default | alias | all-scroll | auto | cell | col-resize | context-menu | crosshair | copy | e-resize | ew-resize | grab | grabbing | help | move | n-resize | ne-resize | nesw-resize | ns-resize | nw-resize | nwse-resize | no-drop | none | not-allowed | pointer | progress | row-resize | s-resize | se-resize | sw-resize | text | vertical-text | w-resize | wait | zoom-in | zoom-out</td><td>마우스 포인터 모양을 지정하는 속성</td><td>cursor:pointer;</td>                
+            </tr>
+        </tbody>
+    </table>
+
+    <br><br><hr><br>
+
+    
 </div>
 </body>
 </html>
