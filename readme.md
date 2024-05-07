@@ -1488,7 +1488,7 @@ conic-gradient(
 
 <br><br>
 
-![컬럼시스템](./columns.png)
+![컬럼시스템](./img/column-base.jpg)
 
 <br><br>
 
@@ -1577,6 +1577,8 @@ conic-gradient(
 <br><br>
 
 ### 9-2. 그리드 아이템에 지정하는 속성
+
+![그리드속성](./img/grid-base.jpg)
 
 | 속성 및 도메인 | 설명 |
 |-----------------------------------------------------------|------------------------------------|
@@ -2025,12 +2027,199 @@ conic-gradient(
 
 ## 10. CSS Flex 속성
 
+![플렉스속성](./img/flex-base.jpg)
+
+<br>
+
+### 10-1. 컨테이너에 지정하는 속성
+
+| 속성 및 도메인 | 설명|
+|--------------------------------------|--------------------------------------------------------------|
+| display : flex &#124; inline-flex| **Flex Container를 정의**<br> - flex: Block 특성의 Flex Container를 정의<br> - inline-flex : Inline 특성의 Flex Container를 정의 |
+| flex-flow : flex-direction flex-wrap | **flex-direction와 flex-wrap의 단축 속성** |
+| flex-direction : row &#124; row-reverse  &#124; column  &#124; column-reverse | **Flex Items의 주 축(Main Axis)을 설정**<br> - row : Itmes를 수평축(왼쪽에서 오른쪽으로)으로 표시하며, 기본값임<br> - row-reverse : Items를 row의 반대 축으로 표시<br> - column : Items를 수직축(위에서 아래로)으로 표시<br> - column-reverse : Items를 column의 반대 축으로 표시  |
+| flex-wrap : nowrap &#124; wrap &#124; wrap-reverse | **Flex Items의 여러 줄 묶음(줄 바꿈) 설정**<br> - nowrap : 모든 Itmes를 여러 줄로 묶지 않음(한 줄에 표시) 기본값임.<br> - wrap : Items를 여러 줄로 묶음<br> - wrap-reverse : Items를 wrap의 역 방향으로 여러 줄로 묶음  |
+| justify-content : flex-start &#124; flex-end &#124; center &#124; space-between &#124; space-around &#124; space-evenly | **주 축(Main Axis)인 가로 방향의 배치 방법을 설정** <br> - flex-start(start) : Items를 시작점으로 정렬, 기본값임.<br> - flex-end(end) : Items를 끝점으로 정렬<br> - center : Items를 가운데 정렬<br> - space-around : 각 Item 좌우 여백을 고르게 정렬 <br> - space-between : 첫 Item은 시작점에, 끝 Item은 끝점에 정렬되고 나머지 여백으로 고르게 정렬<br> - space-evenly : 모든 여백을 고르게 정렬 |
+| align-content : stretch &#124; center &#124; flex-start &#124; flex-end &#124; space-between &#124; space-around &#124; space-evenly | **교차 축(Cross Axis)인 세로 방향의 배치 방법을 설정(2줄 이상)** <br> - stretch : Container의 교차 축을 채우기 위해 Items를 늘림, 기본값임. <br> - flex-start(start) :	Items를 시작점으로 정렬	<br> - flex-end(end) : Items를 끝점으로 정렬<br> - center : Items를 가운데 정렬 <br> - space-around : 각 Item 좌우 여백을 고르게 정렬 <br> - space-between : 첫 Item은 시작점에, 끝 Item은 끝점에 정렬되고 나머지 여백으로 고르게 정렬 <br> - space-evenly : 모든 여백을 고르게 정렬 |
+| align-items : normal &#124; stretch &#124; start &#124; center &#124; end &#124; flex-start &#124; flex-end &#124; baseline | **교차 축(Cross Axis)에서 Items의 정렬 방법을 설정(1줄)** <br> - stretch : Container의 교차 축을 채우기 위해 Items를 늘림, 기본값임. <br> - flex-start(start) :  Items를 각 줄의 시작점으로 정렬	<br> - flex-end(end) : Items를 각 줄의 끝점으로 정렬 <br> - center : Items를 각 줄의 가운데 정렬 <br> - baseline :	Items를 문자 기준선에 정렬 |
+| gap : px, em, cm 등 단위로 지정 | 각 아이템 사이의 간격을 설정 |
+
+<br><br>
+
+### 10-2. 아이템에 지정하는 속성
+
 | 속성 및 도메인 | 설명|
 |---------------------------------------------------------------------------|----------------------------------------------|
-| flex |  |
-| flex-grow |  |
-| flex-shrink |  |
-| flex-basis |  |
+| order	: 정수 | **Flex Item의 순서를 설정** 기본값은 0임. |
+| flex flex-grow flex-shrink flex-basis &#124; auto | **flex-grow, flex-shrink, flex-basis의 단축 속성** <br>  |
+| flex-grow : 숫자 | **Flex Item의 증가 너비 비율을 설정**  기본값은 0임.  |
+| flex-shrink | **Flex Item의 감소 너비 비율을 설정** 기본값은 1임. |
+| flex-basis : auto &#124; px, em, cm 등 단위로 지정 | **Flex Item의 (공간 배분 전) 기본 너비 설정**  |
+| align-self : auto &#124; stretch &#124; center &#124; flex-start &#124; flex-end &#124; baseline | **교차 축(cross-axis)에서 Item의 정렬 방법을 설정** <br> - auto : Container의 align-items 속성을 상속받음, 기본값임. <br> - stretch : Container의 교차 축을 채우기 위해 Item을 늘림	 <br> - flex-start(start) : Item을 각 줄의 시작점으로 정렬 <br> - flex-end(end) : Item을 각 줄의 끝점으로 정렬 <br> - center : Item을 가운데 정렬 <br> baseline : Item을 문자 기준선에 정렬  |
+
 
 <br><hr><br>
+
+## 11. CSS Transition 속성
+
+![CSS트랜지션](./img/css_transition01.png)
+
+| 속성 및 도메인 | 설명|
+|-----------------------------------------|--------------------------------------------------------------------------------|
+| **transition** : [transition-property] [transition-duration] [transition-timing-function] [transition-delay] | **트랜지션 통합 속성** |
+| **transition-property** : none &#124; all &#124; css property | **트랜지션 이벤트를 적용할 CSS 속성을 지정** <br> - none : 아무 속성도 지정하지 않음 <br> - all	: 모든 속성에 지정 <br> - css property명 : (margin, width 등) <br> 속성을 직접 지정하며, 여러 개의 속성을 <br>지정하고자 하는 경우에는 콤마(,)로 구분 |
+| **transition-duration** : 초(s) &#124; 밀리초(ms) 단위 시간 | **트랜지션 이벤트의 실행시간 설정** |
+| **transition-timing-function** : linear &#124; ease &#124; ease-in &#124; ease-out &#124; ease-in-out &#124; step-start &#124; step-end &#124; steps(int,start &#124; end) &#124; cubic-bezier(n,n,n,n) | **트랜지션이 적용될 가속 감속 효과 지정** |
+| **transition-delay** : 초(s) &#124; 밀리초(ms) 단위 시간 | **트랜지션 이벤트의 지연시간 설정** |
+
+<br><br>
+
+### 11-1. transition-property 로 지정 가능한 CSS 속성
+
+| 분류 |	속성 |
+|-----------------------------------------|--------------------------------------------------------------------------------|
+| 배경 관련 속성 | backdrop-filter background background-color background-position background-size |
+| border 관련 속성 | border border-block-end border-block-end-color border-block-end-width border-block-start border-block-start-color border-block-start-width border-bottom border-bottom-color border-bottom-left-radius border-bottom-right-radius border-bottom-width border-color border-end-end-radius border-end-start-radius border-image-outset border-image-slice border-image-width border-inline-end border-inline-end-color border-inline-end-width border-inline-start border-inline-start-color border-inline-start-width border-left border-left-color border-left-width border-radius border-right border-right-color border-right-width border-start-end-radius border-start-start-radius border-top border-top-color border-top-left-radius border-top-right-radius border-top-width border-width |
+| flex 관련 속성 | flex flex-basis flex-grow flex-shrink |
+| grid 관련 속성 | gap row-gap grid-column-gap grid-gap grid-row-gap grid-template-columns grid-template-rows column-count column-gap column-rule column-rule-color column-rule-width column-width columns order |
+| margin & padding 관련 속성 | margin margin-block-end margin-block-start margin-bottom margin-inline-end margin-inline-start margin-left margin-right margin-top padding padding-block-end padding-block-start padding-bottom padding-inline-end padding-inline-start padding-left padding-right padding-top |
+| outline 관련 속성 | outline outline-color outline-offset outline-width |
+| 폰트 & 텍스트 관련 속성 | font font-size font-size-adjust font-stretch font-variation-settings font-weight text-decoration text-decoration-color text-decoration-thickness text-emphasis text-emphasis-color text-indent text-shadow text-underline-offset letter-spacing line-height word-spacing color |
+| scroll 관련 속성 | scroll-margin scroll-margin-block scroll-margin-block-end scroll-margin-block-start scroll-margin-bottom scroll-margin-inline scroll-margin-inline-end scroll-margin-inline-start scroll-margin-left scroll-margin-right scroll-margin-top scroll-padding scroll-padding-block scroll-padding-block-end scroll-padding-block-start scroll-padding-bottom scroll-padding-inline scroll-padding-inline-end scroll-padding-inline-start scroll-padding-left scroll-padding-right scroll-padding-top scroll-snap-coordinate scroll-snap-destination scrollbar-color |
+| 좌표 관련 속성 | top bottom left right |
+| 박스 모델 관련 속성 | box-shadow width height max-width max-height min-width min-height |
+| 이미지 관련 속성 | filter mask mask-border mask-position mask-size clip clip-path object-position |
+| 공간(3D) & 회전 관련 속성 | rotate scale transform transform-origin perspective perspective-origin |
+| 기타 속성 | opacity tab-size zoom visibility z-index vertical-align caret-color accent-color block-size inline-size |
+ 
+<br><br>
+
+### 11-2. transition-timing-function의 시간 제어 함수 적용
+
+| 값 | 그래프 |	속성 |
+|----------------|-----------------------------------|--------------------------------------------------------------------------|
+| **linear** | ![선형](./img/timing_function01.png)  | - 동일한 속도로 이벤트 진행<br> - 선형 그래프와 유사 <br> - cubic-bezier(0, 0, 1, 1)와 동일 |
+| **ease** | ![EASE](./img/timing_function02.png) | - 처음엔 천천히 시작했다가 중간에 빨라지고 마지막엔 느리게 진행 <br> - ease-in-out과 동일한 형태를 띄지만, ease-in-out 보다는 가파르게 진행 <br> - cubic-bezier(0.25, 0.1, 0.25, 1)와 동일 |
+| **ease-in** | ![EASE-IN](./img/timing_function03.png) | - 처음엔 느리게 시작하다가 마지막엔 빠르게 진행 <br> - 지수 그래프와 유사 <br> - cubic-bezier(0.42, 0, 1, 1)와 동일 |
+| **ease-out** | ![EASE-OUT](./img/timing_function04.png) | - 처음엔 빠르게 시작하다가 마지막엔 느리게 진행 <br> - 로그 그래프와 유사 <br> - cubic-bezier(0, 0, 0.58, 1)와 동일 |
+| **ease-in-out** | ![EASE-IN-OUT](./img/timing_function05.png)	| - 처음엔 천천히 시작했다가 중간에 빨라지고 마지막엔 느리게 진행 <br> - ease와 동일한 형태를 띄지만, ease 보다는 완만하게 진행 <br> - cubic-bezier(0.42, 0, 0.58, 1)와 동일 |
+| steps(n, start &#124; end) |  | - duration 시간을 n으로 나눈 시간을 간격으로 n번 동안 비연속적인 트랜지션 진행 <br> - start는 간격의 시작, end는 간격의 끝에서 트랜지션 실행 |
+| step-start |  | steps(1, start)와 동일 |
+| step-end |  | steps(1, end)와 동일 |
+| cubic-bezier(x1, y1, x2, y2) | ![Cubic Bezier](./img/timing_function06.png) | x1, y1, x2, y2에 해당하는 숫자를 넣어서 베지어 곡선을 그리고 해당 곡선을 따라 트랜지션 진행 |
+
+<br>
+
+**Cubic Bezier 함수 생성기를 사용하면 쉽게 적용할 수 있음**  → [Cubic Bezier 링크](https://cubic-bezier.com/)
+
+
+<br><hr><br>
+
+## 12. CSS Animation 속성
+
+![CSS애니메이션](./img/css_animation.jpg)
+
+| 속성 및 도메인 | 설명 |
+|-----------------------------------------|--------------------------------------------------------------------------------|
+| **animation** : name duration timing-function delay iteration-count direction fill-mode play-state | **애니메이션 통합 속성** |
+| **animation-name** : 애니메이션이름 | **애니메이션이름을 지정** |
+| **animation-duration** : 초(s) &#124; 밀리초(ms) 단위 시간 | **애니메이션 실행 시간 지정** |
+| **animation-timing-function** : linear &#124; ease &#124; ease-in &#124; ease-out &#124; ease-in-out &#124; step-start &#124; step-end &#124; steps(int,start &#124; end) &#124; cubic-bezier(n,n,n,n) | **애니메이션이 적용될 가속 감속 효과 지정** |
+| **animation-delay** : 초(s) &#124; 밀리초(ms) 단위 시간 | **애니메이셔의 지연시간 설정** |
+| **animation-direction** : normal &#124; reverse &#124; alternate &#124; alternate-reverse | **애니메이션의 진행방향 설정** <br> - normal : from(0%)에서 to(100%)로 애니메이션이 정방향으로 실행<br> - reverse : to(100%)에서 from(0%)로 애니메이션이 역방향으로 실행<br> - alternate : from(0%)에서 to(100%)로 정방향으로 실행하다가 from(0%)로 역방향으로 실행<br> alternate-reverse : to(100%)에서 from(0%)으로 역방향으로 실행하다가 to(100%)로 정방향으로 실행 |
+| **animation-iteration-count** : 숫자 &#124; infinite | **애니메이션의 반복실행 횟수 지정** <br> - 숫자 : 지정한 숫자만큼 반복실행, 지정하지 않으면 1회만 실행 <br> - infinite : 무한반복으로 실행 |
+| **animation-fill-mode** : none &#124; forwards &#124;backwards  &#124; both | **애니메이션 진행 후 상태 설정** <br> - none : 애니메이션이 종료된 후 원래 상태로 복귀 <br> - forwards : 애니메이션이 종료된 후 앞으로 가기의 상태로 정지 <br> - backwards : 애니메이션이 종료된 후 뒤로 가기의 상태로 정지 <br> - both : 애니메이션이 종료된 후 그 상태를 유지 |
+| **animation-play-state** : paused &#124; running | **애니메이션 제어 설정** <br> - paused : 애니메이션의 실행을 일시 정지 <br>- running : 애니메이션을 재생시킴 |
+
+<br><br>
+
+### 12-1. 애니메이션 키프레임 설정
+
+```css
+/*  */
+@keyframes 애니메이션명1 {
+    from { 시작CSS }
+    to { 종료CSS }
+}
+
+애니메이션적용대상선택자1 {
+    animation-name : 애니메이션명1;
+    animation-duration : 애니메이션실행시간; 
+}
+
+/* */
+@keyframes 애니메이션명2 {
+    0% { 시작CSS }
+    100% { 종료CSS }
+}
+
+애니메이션적용대상선택자2 {
+    animation-name : 애니메이션명2; 
+    animation-duration : 애니메이션실행시간;
+}
+```
+
+<br><br>
+
+### 12-2. animation-timing-function의 시간 제어 함수 적용
+
+| 값 | 그래프 |	속성 |
+|----------------|-----------------------------------|--------------------------------------------------------------------------|
+| **linear** | ![선형](./img/timing_function01.png)  | - 동일한 속도로 이벤트 진행<br> - 선형 그래프와 유사 <br> - cubic-bezier(0, 0, 1, 1)와 동일 |
+| **ease** | ![EASE](./img/timing_function02.png) | - 처음엔 천천히 시작했다가 중간에 빨라지고 마지막엔 느리게 진행 <br> - ease-in-out과 동일한 형태를 띄지만, ease-in-out 보다는 가파르게 진행 <br> - cubic-bezier(0.25, 0.1, 0.25, 1)와 동일 |
+| **ease-in** | ![EASE-IN](./img/timing_function03.png) | - 처음엔 느리게 시작하다가 마지막엔 빠르게 진행 <br> - 지수 그래프와 유사 <br> - cubic-bezier(0.42, 0, 1, 1)와 동일 |
+| **ease-out** | ![EASE-OUT](./img/timing_function04.png) | - 처음엔 빠르게 시작하다가 마지막엔 느리게 진행 <br> - 로그 그래프와 유사 <br> - cubic-bezier(0, 0, 0.58, 1)와 동일 |
+| **ease-in-out** | ![EASE-IN-OUT](./img/timing_function05.png)	| - 처음엔 천천히 시작했다가 중간에 빨라지고 마지막엔 느리게 진행 <br> - ease와 동일한 형태를 띄지만, ease 보다는 완만하게 진행 <br> - cubic-bezier(0.42, 0, 0.58, 1)와 동일 |
+| cubic-bezier(x1, y1, x2, y2) | ![Cubic Bezier](./img/timing_function06.png) | x1, y1, x2, y2에 해당하는 숫자를 넣어서 베지어 곡선을 그리고 해당 곡선을 따라 트랜지션 진행 |
+
+<br>
+
+**Cubic Bezier 함수 생성기를 사용하면 쉽게 적용할 수 있음**  → [Cubic Bezier 링크](https://cubic-bezier.com/)
+
+
+<br><hr><br>
+
+## 13. CSS Transorm 속성
+
+![CSS트랜스폼](./img/css_transform01.jpg)
+
+| 속성 및 도메인 | 설명 |
+|-----------------------------------------|--------------------------------------------------------------------------------|
+| **transform** : none &#124; transform-functions | 여러 변환 함수를 활용해 변형할 수 있도록한 속성 |
+| **transform-origin** : x-axis y-axis z-axis | **변환할 객체의 기준점 지정** <br> - x-axis : left, center, right, length, % 단위로 지정 <br> - y-axis : top, center, bottom, length, % 단위로 지정 <br> - z-axis : length로 지정 |  
+| **transform-style** : flat &#124; preserve-3d | **변형 스타일을 지정** <br> - flat : 평면으로 변환 <br> - preserve-3d : 3차원 속성을 유지 |
+| **perspective** : length | **원근감의 거리지정** |
+| **perspective-origin** : x-axis y-axis | **원근감의 기준위치 지정** <br> - x-axis : left, center, right, length, % 단위로 지정 <br> - y-axis : top, center, bottom, length, % 단위로 지정 | 
+
+<br><br>
+
+### 13-1. Transform 함수
+
+| transform 함수 | 설명 | 단위 |
+|------------------|---------------------------------------------|-------------------------|
+| translate3d(x,y,z) | 요소의 위치를 X축으로 x만큼, Y축으로 y만큼 , Z축으로 z만큼 이동시킨다. | px,%,em등 |
+| translate(x,y) | 요소의 위치를 X축으로 x만큼, Y축으로 y만큼 이동시킨다.	| px,%,em등 |
+| translateX(n)	| 요소의 위치를 X축으로 n만큼 이동시킨다. | px,%,em등 | 
+| translateY(n)	| 요소의 위치를 Y축으로 n만큼 이동시킨다. | px,%,em등 | 
+| translateZ(n) | 요소의 위치를 Z축으로 n만큼 이동시킨다. | px,%,em등 | 
+| scale3d(x,y,z) | 요소의 크기를 x축으로 x배, y축으로 y배,z축으로 z배 만큼 확대 또는 축소시킨다. | 0과 양수 | 
+| scaleX(n) | 요소의 크기를 X축으로 n배 만큼 확대 또는 축소시킨다.	 | 0과 양수 | 
+| scaleY(n)	| 요소의 크기를 Y축으로 n배 만큼 확대 또는 축소시킨다.	 | 0과 양수 | 
+| scaleZ(n)	| 요소의 크기를 Z축으로 n배 만큼 확대 또는 축소시킨다.	 | 0과 양수 | 
+| rotate(angle) | 요소를 angle 만큼 회전 시킨다. | +/-각도(deg)/숫자(turn) | 
+| rotate3d(x,y,z) | 요소를 X축으로 x각도, Y축으로 y각도, Z축으로 z각도 회전시킨다.	 | +/-각도(deg)숫자(turn) | 
+| rotateX(n) | 요소를 X축으로 x각도 회전시킨다. | +/-각도(deg)/숫자(turn) | 
+| rotateY(n) | 요소를 Y축으로 y각도 회전시킨다. | +/-각도/(deg)/숫자(turn) |
+| rotateZ(n) | 요소를 Z축으로 z각도 회전시킨다. | +/-각도(deg)/숫자(turn) | 
+| skew(x-angle,y-angle) | 요소를 X축으로 x 각도만큼, Y축으로 y 각도만큼 기울인다.	| +/-각도(deg) | 
+| skewX(x-angle) | 요소를 X축으로 x각도만큼 기울인다. | +/-각도(deg) | 
+| skewY(y-angle) | 요소를 Y축으로 y각도만큼 기울인다. | +/-각도(deg) | 
+| matrix(n,n,n,n,n,n) | 2차원 변형 함수 |  |
+| matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n) | 3차원 변형 함수 |   |
+
+
+<br><hr><br>
+
+
+
 
